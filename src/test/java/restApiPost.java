@@ -27,9 +27,10 @@ public class restApiPost extends TestBase {
                 .statusCode(201)
                 .body("name", is("Andrey"))
                 .body("job", is("QA Automation"))
-                .body("id",is(notNullValue()))
+                .body("id", is(notNullValue()))
                 .body("createdAt", is(notNullValue()));
     }
+
     @Test
     @DisplayName("CreateUser name null")
     void createUserNotNameTests() {
@@ -48,9 +49,10 @@ public class restApiPost extends TestBase {
                 .statusCode(201)
                 .body("name", is(nullValue()))
                 .body("job", is("QA Automation"))
-                .body("id",is(notNullValue()))
+                .body("id", is(notNullValue()))
                 .body("createdAt", is(notNullValue()));
     }
+
     @Test
     @DisplayName("CreateUser job null")
     void createUserNotJobTests() {
@@ -69,9 +71,10 @@ public class restApiPost extends TestBase {
                 .statusCode(201)
                 .body("name", is("Andrey"))
                 .body("job", is(nullValue()))
-                .body("id",is(notNullValue()))
+                .body("id", is(notNullValue()))
                 .body("createdAt", is(notNullValue()));
     }
+
     @Test
     @DisplayName("CreateUser name and job null")
     void createUserNotJobNotNameTests() {
@@ -90,7 +93,7 @@ public class restApiPost extends TestBase {
                 .statusCode(201)
                 .body("name", is(nullValue()))
                 .body("job", is(nullValue()))
-                .body("id",is(notNullValue()))
+                .body("id", is(notNullValue()))
                 .body("createdAt", is(notNullValue()));
     }
 }

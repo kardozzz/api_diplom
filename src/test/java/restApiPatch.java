@@ -29,6 +29,7 @@ public class restApiPatch extends TestBase {
                 .body("job", is("zion resident"))
                 .body("updatedAt", is(notNullValue()));
     }
+
     @Test
     @DisplayName("UpdateUser name null")
     void patchUserNotNameTests() {
@@ -48,6 +49,7 @@ public class restApiPatch extends TestBase {
                 .body("job", is("zion resident"))
                 .body("updatedAt", is(notNullValue()));
     }
+
     @Test
     @DisplayName("UpdateUser job null")
     void patchUserNotJobTests() {
@@ -68,6 +70,7 @@ public class restApiPatch extends TestBase {
                 .body("job", is(nullValue()))
                 .body("updatedAt", is(notNullValue()));
     }
+
     @Test
     @DisplayName("UpdateUser job null")
     void patchUserNotJobAndNameTests() {
