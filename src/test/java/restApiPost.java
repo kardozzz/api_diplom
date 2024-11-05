@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.core.IsNull.nullValue;
 
-public class restApiPost {
+public class restApiPost extends TestBase {
 
     @Test
     @DisplayName("CreateUser name and job not null")
@@ -19,7 +19,7 @@ public class restApiPost {
 
                 .when()
                 .log().uri()
-                .post("https://reqres.in/api/users")
+                .post("/users")
 
                 .then()
                 .log().status()
@@ -40,7 +40,7 @@ public class restApiPost {
 
                 .when()
                 .log().uri()
-                .post("https://reqres.in/api/users")
+                .post("/users")
 
                 .then()
                 .log().status()
@@ -61,7 +61,7 @@ public class restApiPost {
 
                 .when()
                 .log().uri()
-                .post("https://reqres.in/api/users")
+                .post("/users")
 
                 .then()
                 .log().status()
@@ -82,7 +82,7 @@ public class restApiPost {
 
                 .when()
                 .log().uri()
-                .post("https://reqres.in/api/users")
+                .post("/users")
 
                 .then()
                 .log().status()

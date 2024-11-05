@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.core.IsNull.nullValue;
 
-public class restApiPatch {
+public class restApiPatch extends TestBase {
 
     @Test
     @DisplayName("UpdateUser name and job not null")
@@ -19,7 +19,7 @@ public class restApiPatch {
 
                 .when()
                 .log().uri()
-                .patch("https://reqres.in/api/users/2")
+                .patch("/users/2")
 
                 .then()
                 .log().status()
@@ -39,7 +39,7 @@ public class restApiPatch {
 
                 .when()
                 .log().uri()
-                .patch("https://reqres.in/api/users/2")
+                .patch("/users/2")
 
                 .then()
                 .log().status()
@@ -58,7 +58,7 @@ public class restApiPatch {
 
                 .when()
                 .log().uri()
-                .patch("https://reqres.in/api/users/2")
+                .patch("/users/2")
 
                 .then()
                 .log().status()
@@ -78,7 +78,7 @@ public class restApiPatch {
 
                 .when()
                 .log().uri()
-                .patch("https://reqres.in/api/users/2")
+                .patch("/users/2")
 
                 .then()
                 .log().status()
