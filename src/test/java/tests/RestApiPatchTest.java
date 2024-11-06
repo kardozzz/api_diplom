@@ -3,6 +3,7 @@ package tests;
 import models.UserBodyResponseModel;
 import models.UserBodyRequestModel;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -10,6 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 import static specs.DataSpec.*;
 
+@Tag("Regress")
 public class RestApiPatchTest extends TestBase {
 
 

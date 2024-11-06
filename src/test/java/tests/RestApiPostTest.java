@@ -3,6 +3,7 @@ package tests;
 import models.UserBodyResponseModel;
 import models.UserBodyRequestModel;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -11,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static specs.DataSpec.dataCreateUserRequestSpec;
 import static specs.DataSpec.dataCreateUserResponseSpec;
 
+@Tag("Regress")
 public class RestApiPostTest extends TestBase {
 
     @Test
@@ -36,6 +38,7 @@ public class RestApiPostTest extends TestBase {
             assertNotNull(response.getCreatedAt());
         });
     }
+
     @Test
     @DisplayName("CreateUser name null")
     void createUserNotNameTest() {
@@ -58,6 +61,7 @@ public class RestApiPostTest extends TestBase {
             assertNotNull(response.getCreatedAt());
         });
     }
+
     @Test
     @DisplayName("CreateUser job null")
     void createUserNotJobTest() {
@@ -80,6 +84,7 @@ public class RestApiPostTest extends TestBase {
             assertNotNull(response.getCreatedAt());
         });
     }
+
     @Test
     @DisplayName("CreateUser name and job null")
     void createUserNotNameNotJobTest() {

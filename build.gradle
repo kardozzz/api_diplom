@@ -39,6 +39,6 @@ dependencies {
 }
 task runing_tests(type: Test) {
     useJUnitPlatform {
-        includeTags("REGRESS")
+        includeTags("Regress")
     }
 }
