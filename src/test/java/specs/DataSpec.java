@@ -13,19 +13,21 @@ public class DataSpec {
     public static RequestSpecification dataUpdateUserRequestSpec = with()
             .filter(withCustomTemplates())
             .contentType(JSON)
-            .log().uri();
+            .log().all();
     public static ResponseSpecification dataUpdateUserResponseSpec = new ResponseSpecBuilder()
             .expectStatusCode(200)
             .log(BODY)
-            .build();
+            .build()
+            .log().all();
     public static RequestSpecification dataCreateUserRequestSpec = with()
             .filter(withCustomTemplates())
             .contentType(JSON)
-            .log().uri();
+            .log().all();
     public static ResponseSpecification dataCreateUserResponseSpec = new ResponseSpecBuilder()
             .expectStatusCode(201)
             .log(BODY)
-            .build();
+            .build()
+            .log().all();
 
 }
 
