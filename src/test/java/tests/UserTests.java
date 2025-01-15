@@ -20,7 +20,7 @@ public class UserTests extends TestBase {
     @DisplayName("Проверка конкретного email")
     void checkUserEmailTest() {
         UserListRsModel response = usersApi.getUserList();
-        usersApi.checkCorrespondence("michael.lawson@reqres.in", 0, response);
+        usersApi.checkCorrespondence("lindsay.ferguson@reqres.in", 1, response);
     }
 
     @Test

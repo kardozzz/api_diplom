@@ -24,7 +24,7 @@ public class UsersApi {
     }
 
     public void checkCorrespondence(String email, int id, UserListRsModel response) {
-        step("Проверить, что в ответе у email пользователя соответствует {0}", () ->
+        step("Проверить, что в ответе email пользователя соответствует", () ->
                 assertEquals(response.getData().get(id).getEmail(), email));
     }
 
