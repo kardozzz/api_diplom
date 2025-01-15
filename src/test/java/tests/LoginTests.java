@@ -1,0 +1,35 @@
+package tests;
+
+import api.LoginApi;
+import models.RequestModel;
+import models.LoginRsModel;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+
+@Tag("api")
+@DisplayName("Тесты на логин")
+public class LoginTests extends TestBase {
+
+    LoginApi loginApi = new LoginApi();
+
+    @Test
+    @DisplayName("Проверка успешного входа в учетную запись")
+    void successfulLoginTest() {
+        RequestModel loginData = new RequestModel();
+        loginData.setEmail("eve.holt@reqres.in");
+        loginData.setPassword("cityslicka");
+        LoginRsModel response = loginApi.doLoginPostRequest(loginData);
+        loginApi.checkToken(response);
+    }
+
+    @Test
+    @DisplayName("Проверка не успешного входа в учетную запись")
+    void unSuccessfulLoginTest() {
+        RequestModel loginData = new RequestModel();
+        loginData.setEmail("peter@klaven");
+        LoginRsModel response = loginApi.doUnSuccessfulLoginPostRequest(loginData);
+        loginApi.checkErrorLogin(response);
+    }
+}

@@ -34,11 +34,15 @@ dependencies {
             "com.codeborne:selenide:$selenideVersion",
             "org.junit.jupiter:junit-jupiter:5.11.1",
             'org.assertj:assertj-core:3.26.3',
-            'org.slf4j:slf4j-simple:2.0.16'
+            'org.slf4j:slf4j-simple:2.0.16',
+            'org.aeonbits.owner:owner:1.0.12'
     )
 }
-task runing_tests(type: Test) {
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+task runing_reqresTests(type: Test) {
     useJUnitPlatform {
-        includeTags("Regress")
+        includeTags("api")
     }
 }
