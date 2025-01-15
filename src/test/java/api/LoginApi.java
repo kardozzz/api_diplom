@@ -47,7 +47,7 @@ public class LoginApi {
 
     public void checkErrorLogin(LoginRsModel response) {
         step("Проверить, что вернулась ошибка", () ->
-                Assertions.assertThat(response.getError()).isEqualTo("error: Missing password"));
+                Assertions.assertThat(response.getError()).isEqualTo("Missing password"));
     }
 
 }
