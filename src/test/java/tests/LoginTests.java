@@ -1,8 +1,8 @@
 package tests;
 
 import api.LoginApi;
-import models.RequestModel;
 import models.LoginRsModel;
+import models.RequestModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

@@ -4,13 +4,8 @@ plugins {
     id "io.freefair.lombok" version "6.0.0-m2"
 }
 
-repositories {
-    mavenCentral()
-}
-
-def restAssuredVersion = "5.3.1",
-    allureVersion = "2.21.0",
-    selenideVersion = "7.4.2"
+def restAssuredVersion = "5.5.0",
+    allureVersion = "2.29.0"
 
 allure {
     report {
@@ -26,20 +21,37 @@ allure {
     }
 }
 
+group = 'ru.maxcong'
+version = '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     testImplementation(
+            'org.junit.jupiter:junit-jupiter:5.11.1',
+            'org.slf4j:slf4j-simple:2.0.16',
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "io.rest-assured:json-schema-validator:$restAssuredVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
-            "com.codeborne:selenide:$selenideVersion",
-            "org.junit.jupiter:junit-jupiter:5.11.1",
             'org.assertj:assertj-core:3.26.3',
-            'org.slf4j:slf4j-simple:2.0.16',
             'org.aeonbits.owner:owner:1.0.12'
+
     )
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.11.1')
 }
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
+
+tasks.withType(Test) {
+
+    systemProperties(System.getProperties())
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
 }
 task runing_reqresTests(type: Test) {
     useJUnitPlatform {

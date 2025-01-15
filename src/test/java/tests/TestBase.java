@@ -2,8 +2,8 @@ package tests;
 
 import config.WebConfig;
 import io.restassured.RestAssured;
-import org.junit.jupiter.api.BeforeAll;
 import org.aeonbits.owner.ConfigFactory;
+import org.junit.jupiter.api.BeforeAll;
 
 public class TestBase {
     @BeforeAll

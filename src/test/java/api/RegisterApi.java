@@ -22,12 +22,14 @@ public class RegisterApi {
                         .extract().as(RegisterRsModel.class));
         return response;
     }
+
     public void checkTokenAndId(RegisterRsModel response) {
         step("Проверить, что id и token not null", () -> {
             Assertions.assertThat(response.getId()).asInt();
             Assertions.assertThat(response.getToken()).isAlphanumeric();
         });
     }
+
     public RegisterRsModel doUnSuccessfulRegisterPostRequest(RequestModel request) {
         RegisterRsModel response = step("Сделать запрос регистрации", () ->
                 given(commonRequest)
