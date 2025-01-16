@@ -15,7 +15,7 @@ public class LoginTests extends TestBase {
     LoginApi loginApi = new LoginApi();
 
     @Test
-    @DisplayName("Проверка успешного входа в учетную запись")
+    @DisplayName("Проверка успешного логина")
     void successfulLoginTest() {
         RequestModel loginData = new RequestModel();
         loginData.setEmail("eve.holt@reqres.in");
@@ -25,7 +25,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка не успешного входа в учетную запись")
+    @DisplayName("Проверка не успешного логина")
     void unSuccessfulLoginTest() {
         RequestModel loginData = new RequestModel();
         loginData.setEmail("peter@klaven");
