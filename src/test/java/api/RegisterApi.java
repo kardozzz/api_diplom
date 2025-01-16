@@ -45,7 +45,7 @@ public class RegisterApi {
     }
 
     public void checkErrorRegister(RegisterRsModel response) {
-        step("Проверить, что id и token not null", () -> {
+        step("Проверить, что вернулась ошибка", () -> {
             Assertions.assertThat(response.getError()).isEqualTo("Missing password");
         });
     }
