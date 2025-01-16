@@ -78,7 +78,7 @@
 
 При выполнении команды тесты запустятся локально.
 
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/Jenkins.svg"> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/C19-Aleksey_Astashkin-reqresIN/build?delay=0sec)
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/Jenkins.svg"> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/api_alabzin_diplom/)
 
 ### Параметры сборки
 
@@ -89,7 +89,7 @@
 <img title="Jenkins Build" src="images/screens/jenkins_build.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/Allure.svg"> [Пример Allure-отчета](https://jenkins.autotests.cloud/job/C19-Aleksey_Astashkin-reqresIN/34/allure/)
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/Allure.svg"> [Пример Allure-отчета](https://jenkins.autotests.cloud/job/api_alabzin_diplom/11/allure/)
 
 #### Главная страница отчета Allure содержит следующие блоки:
 
@@ -112,7 +112,7 @@
 <img title="Test Results in Alure" src="images/screens/allure_suites.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="images/Allure_TO.svg"> [Интеграция с Allure TestOps](https://allure.autotests.cloud/project/3457/launches)
+## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="images/Allure_TO.svg"> [Интеграция с Allure TestOps](https://allure.autotests.cloud/project/4563/launches)
 
 #### На вкладке Dashboards отображается:
 
