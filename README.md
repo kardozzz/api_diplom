@@ -1,6 +1,6 @@
 # Проект по автоматизации тестирования API на [reqres](https://reqres.in/)
 
-![WB_logo.jpg](media/logo/reqres_logo.png)
+![WB_logo.jpg](images/reqres_logo.png)
 
 ## :pushpin: Содержание:
 
@@ -9,7 +9,6 @@
 - [Сборка в Jenkins](#-сборка-в-jenkins)
 - [Пример Allure-отчета](#-пример-allure-отчета)
 - [Интеграция с Allure TestOps](#-интеграция-с-allure-testOps)
-- [Интеграция с Jira](#-интеграция-с-jira)
 - [Уведомления в Telegram](#-уведомления-в-telegram)
 
 ## :computer: Используемый стек
@@ -54,7 +53,6 @@
 - Для удаленного запуска реализована джоба в [jenkins](https://www.jenkins.io/) с формированием Allure-отчета и
   отправкой результатов в <code>Telegram</code> при помощи бота
 - Осуществлена интеграция с [Allure TestOps](https://docs.qameta.io/allure/)
-- Также интегрирован с инструментом управления проектами [jira](https://www.atlassian.com/ru/software/jira)
 
 ## :spiral_notepad: Список тестов
 #### В каждом тесте, реализованы негативные и позитивные сценарии
@@ -67,13 +65,10 @@
 :white_check_mark: Список пользователей API GET <br />
 :white_check_mark: Удаление пользователя API DELETE <br />
 
-## :arrow_forward: Запуск автотестов
-- Для запуска тестов необходимо создать файл в ```src/test/resources/credentials.properties```, также в сам файл нужно добавить корректный логин и пароль.
-- Логин и пароль, можно получить на сайте [Reqres](https://reqres.in/) кликнуть на ```POST LOGIN - SUCCESSFUL```
 ### Варианты запуска тестов
 
-- ```local``` -Запуск всех тестов
-- ```remote``` -Запуск тестов sanity
+- ```local``` -Запуск тестов локально.
+- ```remote``` -Запуск тестов удаленно.
 
 ### Запуск тестов из терминала
 
@@ -114,10 +109,10 @@
 - Response с вложением ```Status code, Headers, Body```
 
 <p align="center">
-<img title="Test Results in Alure" src="media/screens/AllureSuites.png">
+<img title="Test Results in Alure" src="images/screens/allure_suites.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/Allure_TO.svg"> [Интеграция с Allure TestOps](https://allure.autotests.cloud/project/3457/launches)
+## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="images/Allure_TO.svg"> [Интеграция с Allure TestOps](https://allure.autotests.cloud/project/3457/launches)
 
 #### На вкладке Dashboards отображается:
 
@@ -126,7 +121,7 @@
 - Результаты запусков/прохождения тестов в графике по датам
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="media/screens/DashBoardTestOps.png">
+<img title="Allure TestOps DashBoard" src="images/screens/dashboardTestOps.png">
 </p>
 
 #### На вкладке Launches можно увидеть:
@@ -135,7 +130,7 @@
 - Результаты запуска тестов из Allure TestOps
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="media/screens/LaunchesTestOps.png">
+<img title="Allure TestOps DashBoard" src="images/screens/launchesTestOps.png">
 </p>
 
 Результаты выполнения отдельных тестов:
@@ -145,21 +140,14 @@
 - Response с вложением ```Status code, Headers, Body```
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="media/screens/AllureTestCases.png">
+<img title="Allure TestOps DashBoard" src="images/screens/resultTests.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> [Интеграция с Jira](https://jira.autotests.cloud/browse/HOMEWORK-772)
 
-Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. В задаче отображаются прикреплённые к ней
-тест-кейсы, а также результаты запусков/прохождения тестов.
-<p align="center">
-<img title="Allure TestOps DashBoard" src="media/screens/Jira.png">
-</p>
-
-### <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram
+### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/Telegram.svg"> Уведомления в Telegram
 
 После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с
 результатом.
 <p align="center">
-<img title="Telegram" src="media/screens/Telegram.png">
+<img title="Telegram" src="images/screens/TgBOT.png">
 </p>
